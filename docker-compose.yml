@@ -1,7 +1,7 @@
 phpredisadmin:
   build: .
   volumes:
-    ./:/src/app
+      - ./:/src/app/
   environment:
     - ADMIN_USER=admin
     - ADMIN_PASS=admin
