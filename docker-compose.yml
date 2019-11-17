@@ -1,5 +1,7 @@
 phpredisadmin:
   build: .
+  volumes:
+      - ./:/src/app/
   environment:
     - ADMIN_USER=admin
     - ADMIN_PASS=admin
@@ -8,7 +10,7 @@ phpredisadmin:
   links:
     - redis
   ports:
-    - "80:80"
+    - "8099:80"
 
 redis:
   image: redis
