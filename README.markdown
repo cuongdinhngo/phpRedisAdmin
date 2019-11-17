@@ -49,6 +49,18 @@ docker run --rm -it -e REDIS_1_HOST=myredis.host -e REDIS_1_NAME=MyRedis -p 80:8
 ```
 Also, a Docker Compose manifest with a stack for testing and development is provided. Just issue ```docker-compose up --build``` to start it and browse to http://localhost. See ```docker-compose.yml``` file for configuration details.
 
+[MEMO]
+====
+After run ``````docker-compose up --build```, you need to install composer and set up config in virtual miche
+```
+docker exec -it phpredisadmin_phpredisadmin_1 bash
+
+composer install
+
+cp includes/config.environment.inc.php includes/config.inc.php
+```
+
+
 Environment variables summary
 ====
 
